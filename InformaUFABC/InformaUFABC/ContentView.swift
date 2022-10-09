@@ -15,7 +15,7 @@ struct ContentView: View {
     }
     var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
+            VStack(spacing: 20) {
                 Link(destination: URL(string: "https://proap.ufabc.edu.br/nutricao-e-restaurantes-universitarios/cardapio-semanal")!,
                      label: {
                     Label(title: { Text("Cardápio RU")
@@ -30,7 +30,6 @@ struct ContentView: View {
                         .background(Color .yellow)
                         .foregroundColor(Color("Grinch"))
                         .clipShape(Capsule())
-                        .padding(.all)
                 })
 
 
@@ -39,7 +38,7 @@ struct ContentView: View {
                     Label(title: { Text("Fretado")
                             .bold()
                             .foregroundColor(Color("Grinch"))
-                            .font(.system(size: 45))
+                            .font(.system(size: 40))
                     },
                           icon: { Image(systemName: "bus")
                             .font(.system(size: 25, weight: .bold, design: .default))
@@ -49,9 +48,24 @@ struct ContentView: View {
                         .foregroundColor(Color("Grinch"))
                         .clipShape(Capsule())
                 })
+
+                Link(destination: URL(string: "https://pu.ufabc.edu.br/horarios-dos-onibus-old")!,
+                     label: {
+                    Label(title: { Text("Agenda")
+                            .bold()
+                            .foregroundColor(Color("Grinch"))
+                            .font(.system(size: 40))
+                    },
+                          icon: { Image(systemName: "calendar")
+                            .font(.system(size: 30, weight: .bold, design: .default))
+                    })
+                        .frame(width: 300, height: 50, alignment: .center)
+                        .background(Color .yellow)
+                        .foregroundColor(Color("Grinch"))
+                        .clipShape(Capsule())
+                })
             }
-            .navigationTitle("INFORMA UFABC")
-            .frame(maxWidth: .infinity, alignment: .center)
+            .navigationTitle("INFORMA UFABC").accessibilityShowsLargeContentViewer()
         }
     }
 }
