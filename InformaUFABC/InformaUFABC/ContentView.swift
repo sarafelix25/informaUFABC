@@ -12,6 +12,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Link(destination: URL(string: "https://proap.ufabc.edu.br/nutricao-e-restaurantes-universitarios/cardapio-semanal")!,
+                     label: {
+                    Label(title: { Text("Restaurante Universitário")},
+                          icon: { Image(systemName: "menucard")})
+                        .frame(width: 250, height: 50, alignment: .center)
+                        .background(Color .yellow)
+                        .foregroundColor(Color("Grinch"))
+                        .clipShape(Capsule())
+                })
             }
             .navigationTitle("INFORMA UFABC")
         }
