@@ -18,14 +18,15 @@ struct ContentView: View {
             VStack(spacing: 10) {
                 Link(destination: URL(string: "https://proap.ufabc.edu.br/nutricao-e-restaurantes-universitarios/cardapio-semanal")!,
                      label: {
-                    Label(title: { Text("Restaurante Universitário")
+                    Label(title: { Text("Cardápio RU")
                             .bold()
                             .foregroundColor(Color("Grinch"))
+                            .font(.system(size: 40))
                     },
                           icon: { Image(systemName: "menucard")
-                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .font(.system(size: 30, weight: .bold, design: .default))
                     })
-                        .frame(width: 250, height: 50, alignment: .center)
+                        .frame(width: 300, height: 50, alignment: .center)
                         .background(Color .yellow)
                         .foregroundColor(Color("Grinch"))
                         .clipShape(Capsule())
@@ -38,18 +39,19 @@ struct ContentView: View {
                     Label(title: { Text("Fretado")
                             .bold()
                             .foregroundColor(Color("Grinch"))
+                            .font(.system(size: 45))
                     },
                           icon: { Image(systemName: "bus")
-                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .font(.system(size: 25, weight: .bold, design: .default))
                     })
-                        .frame(width: 250, height: 50, alignment: .center)
+                        .frame(width: 300, height: 50, alignment: .center)
                         .background(Color .yellow)
                         .foregroundColor(Color("Grinch"))
                         .clipShape(Capsule())
                 })
             }
             .navigationTitle("INFORMA UFABC")
-            .frame(alignment: .center)
+            .frame(maxWidth: .infinity, alignment: .center)
         }
     }
 }
