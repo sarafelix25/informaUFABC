@@ -14,8 +14,13 @@ struct ContentView: View {
             VStack {
                 Link(destination: URL(string: "https://proap.ufabc.edu.br/nutricao-e-restaurantes-universitarios/cardapio-semanal")!,
                      label: {
-                    Label(title: { Text("Restaurante Universitário")},
-                          icon: { Image(systemName: "menucard")})
+                    Label(title: { Text("Restaurante Universitário")
+                            .bold()
+                            .foregroundColor(Color("Grinch"))
+                    },
+                          icon: { Image(systemName: "menucard")
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                    })
                         .frame(width: 250, height: 50, alignment: .center)
                         .background(Color .yellow)
                         .foregroundColor(Color("Grinch"))
