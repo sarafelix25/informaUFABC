@@ -24,7 +24,7 @@ struct ContentView: View {
                             .font(.system(size: 40))
                     },
                           icon: { Image(systemName: "menucard")
-                            .font(.system(size: 30, weight: .bold, design: .default))
+                            .font(.system(size: 30, weight: .semibold, design: .default))
                     })
                         .frame(width: 300, height: 50, alignment: .center)
                         .background(Color .yellow)
@@ -41,7 +41,7 @@ struct ContentView: View {
                             .font(.system(size: 40))
                     },
                           icon: { Image(systemName: "bus")
-                            .font(.system(size: 25, weight: .bold, design: .default))
+                            .font(.system(size: 25, weight: .semibold, design: .default))
                     })
                         .frame(width: 300, height: 50, alignment: .center)
                         .background(Color .yellow)
@@ -49,7 +49,7 @@ struct ContentView: View {
                         .clipShape(Capsule())
                 })
 
-                Link(destination: URL(string: "https://pu.ufabc.edu.br/horarios-dos-onibus-old")!,
+                Link(destination: URL(string: "https://www.ufabc.edu.br/eventos")!,
                      label: {
                     Label(title: { Text("Agenda")
                             .bold()
@@ -57,7 +57,7 @@ struct ContentView: View {
                             .font(.system(size: 40))
                     },
                           icon: { Image(systemName: "calendar")
-                            .font(.system(size: 30, weight: .bold, design: .default))
+                            .font(.system(size: 30, weight: .semibold, design: .default))
                     })
                         .frame(width: 300, height: 50, alignment: .center)
                         .background(Color .yellow)
