@@ -9,6 +9,10 @@ import SwiftUI
 import WebKit
 
 struct ContentView: View {
+
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Grinch") as Any]
+    }
     var body: some View {
         NavigationView {
             VStack {
